@@ -1,6 +1,4 @@
-/**
- *To avoid bloated App.js component, page routes created at this component.
- */
+
 
 import React from "react";
 import {
@@ -23,10 +21,6 @@ import TermsConditionPage from "../pages/TermsConditionPage";
 import Demo from "../pages/Demo";
 import Logout from "./Logout";
 
-/*
- * Creating routes via createBrowserRouter method makes project ready for react-router-dom 6.4 data fetching.
- * MainLayout component has common items like navbar and footer.
- */
 
 const router = createBrowserRouter(
   createRoutesFromElements(

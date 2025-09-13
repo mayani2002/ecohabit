@@ -3,10 +3,12 @@ import { getCenterDataWithPostal } from "../services/earth911services.js";
 
 const getPostalData = async (req, res, next) => {
   try {
+    console.log('getPostalData called with:', req.params);
     const response = await fetch(
       `${process.env.EARTH911_BASE_URL}/earth911.getPostalData?api_key=${process.env.EARTH911_API_KEY}&country=${req.params.country}&postal_code=${req.params.postal}`
     );
     const data = await response.json();
+    console.log('getPostalData response:', data);
     res.status(200).send(data);
   } catch (err) {
     console.error(`Error fetching from EARTH911 Api`, err.message);
@@ -16,10 +18,12 @@ const getPostalData = async (req, res, next) => {
 
 const getLocationDetails = async (req, res, next) => {
   try {
+    console.log('getLocationDetails called with:', req.params);
     const response = await fetch(
       `${process.env.EARTH911_BASE_URL}/earth911.getLocationDetails?api_key=${process.env.EARTH911_API_KEY}&location_id=${req.params.locId}`
     );
     const data = await response.json();
+    console.log('getLocationDetails response:', data);
     res.status(200).send(data);
   } catch (err) {
     console.error(`Error fetching from EARTH911 Api`, err.message);
@@ -29,10 +33,12 @@ const getLocationDetails = async (req, res, next) => {
 
 const searchLocations = async (req, res, next) => {
   try {
+    console.log('searchLocations called with:', req.params);
     const response = await fetch(
       `${process.env.EARTH911_BASE_URL}/earth911.searchLocations?api_key=${process.env.EARTH911_API_KEY}&longitude=${req.params.log}&latitude=${req.params.lat}`
     );
     const data = await response.json();
+    console.log('searchLocations response:', data);
     res.status(200).send(data);
   } catch (err) {
     console.error(`Error fetching from EARTH911 Api`, err.message);
