@@ -9,7 +9,7 @@ const MainBox = styled(Box)(({ theme }) => ({
   flexDirection: "column",
   flex: 2,
   justifyContent: "space-between",
-  padding: "4.8vw 12vw",
+  padding: "5vw 12vw",
   color: "white",
   minHeight: "630px",
   [theme.breakpoints.down("md")]: {
