@@ -11,22 +11,19 @@ const earth911Router = Router();
 const recyclingCentersPrefix = "/recyclingcenters";
 
 earth911Router.get(
-  `${recyclingCentersPrefix}/getPostalData/country/:country/postal/:postal`,
-
+  `${recyclingCentersPrefix}/getPostalData/country/:country/postal/:postal/id/:id`,
   getPostalData
 );
 earth911Router.get(
-  `${recyclingCentersPrefix}/getLocationDetails/:locId`,
+  `${recyclingCentersPrefix}/getLocationDetails/:locId/id/:id`,
   getLocationDetails
 );
 earth911Router.get(
-  `${recyclingCentersPrefix}/searchLocations/log/:log/lat/:lat`,
-
+  `${recyclingCentersPrefix}/searchLocations/log/:log/lat/:lat/id/:id`,
   searchLocations
 );
 earth911Router.get(
-  `${recyclingCentersPrefix}/country/:country/postal/:postal`,
-
+  `${recyclingCentersPrefix}/country/:country/postal/:postal/id/:id`,
   getCentersDetail
 );
 
