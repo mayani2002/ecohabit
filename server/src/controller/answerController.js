@@ -5,6 +5,7 @@ const createAnswer = async (req, res) => {
   try {
     // authorize ownership of answer
     if (req.user.id !== req.body.user) {
+      console.log("Access denied");
       return res.status(403).json({ error: "Access denied" });
     }
 
