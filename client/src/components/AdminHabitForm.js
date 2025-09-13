@@ -43,6 +43,7 @@ const AdminHabitForm = ({ toggleForm, onAdd }) => {
       [e.target.name]: e.target.value,
     }));
   };
+  console.log(habitFormData);
 
   const onSubmit = (e) => {
     e.preventDefault();
